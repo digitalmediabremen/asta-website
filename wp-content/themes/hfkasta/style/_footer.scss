@@ -1,7 +1,7 @@
 $footer-icon-size: 40px;
 
 footer {
-    border-top: 4px solid $brand-primary-color;
+    border-top: $border-weight solid $brand-primary-color;
     background: #fff;
     z-index: 20;
     position: relative;
@@ -11,16 +11,14 @@ footer {
     display: flex;
     box-sizing: border-box;
 
-    a {
-        display: block;
-        width: $footer-icon-size;
-        height: $footer-icon-size;
-        margin-right: 20px;
-        text-decoration: none;
+    ul {
+        margin: 10px 0;
+        padding: 0;
 
-        &.imprint {
-            margin-top: 8px;
-            font-size: 1.3rem;
+        li {
+            list-style-type: none;
+            display: inline-block;
+            margin-right: 20px;
         }
     }
 }

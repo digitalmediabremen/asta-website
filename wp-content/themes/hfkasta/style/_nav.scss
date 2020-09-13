@@ -1,5 +1,5 @@
 $search-bar-height: 40px;
-$menu-item-height: 36px;
+$icon-height: 18px;
 
 .hamburger.hamburger--squeeze {
     position: fixed;
@@ -9,19 +9,17 @@ $menu-item-height: 36px;
 }
 
 nav {
-    position: fixed;
+    position: absolute;
     width: 280px;
-    // min-height: calc(100% - #{$footer-height} - #{$ticker-height});
     min-height: 100%;
     right: -280px;
     top: 0;
     background: #fff;
     color: $brand-primary-color;
-    border-left: 4px solid $brand-primary-color;
+    border-left: $border-weight solid $brand-primary-color;
     z-index: 30;
     transition: right $transition-time ease;
-    padding: (60px + $ticker-height) 20px (20px + $footer-height) 20px;
-    // margin: $ticker-height 0 $footer-height 0;
+    padding: (60px + $ticker-height) 20px 20px 20px;
     box-sizing: border-box;
 
     &.is-open {
@@ -34,14 +32,14 @@ nav {
         position: relative;
 
         .search-field {
-            width: calc(100% - #{$search-bar-height} - 10px);
+            width: calc(100% - 30px);
             height: 100%;
             padding: 5px;
             border: 0;
             border-radius: 0;
             background: #fff;
             color: $brand-primary-color;
-            border: 4px solid $brand-primary-color;
+            border: $border-weight solid $brand-primary-color;
             font-size: 1.6rem;
 
             &:focus {
@@ -81,9 +79,9 @@ nav {
 
         .search-icon {
             z-index: 31;
-            margin: 4px 0 4px 8px;
-            height: $search-bar-height - 8px;
-            width: $search-bar-height - 8px;
+            margin: 11px 0 4px 8px;
+            height: $icon-height;
+            width: $icon-height;
         }
 
         .search-submit,
@@ -101,39 +99,41 @@ nav {
         li {
             list-style-type: none;
             position: relative;
+            margin-bottom: 10px;
 
             a {
                 color: $brand-primary-color;
                 font-weight: normal;
-                font-size: 2rem;
+                font-size: 1.8rem;
+                word-break: break-word;
                 text-decoration: none;
                 color: $brand-primary-color;
             }
 
             &.menu-item-has-children {
-                &::after {
-                    position: absolute;
-                    right: -8px;
-                    top: 7px;
+                .dropdown {
                     content: '';
-                    /*
                     position: relative;
                     display: inline-block;
-                    margin: 0 0 -4px 8px;
-                    */
-                    height: $menu-item-height;
-                    width: $menu-item-height;
+                    margin: 0 0 4px 6px;
+                    height: $icon-height;
+                    width: $icon-height + 2;
                     background: url('/hfkasta/wp-content/themes/hfkasta/assets/dropdown.svg') no-repeat center center;
                     transform: rotate(0deg);
                     transition: transform $transition-time;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
 
                 &.is-open {
-                    &::after {
+                    .dropdown {
                         transform: rotate(-180deg);
                     }
 
                     .sub-menu {
+                        margin-top: 10px;
                         max-height: 150px;
                         transition: max-height $transition-time;
                     }
@@ -147,7 +147,35 @@ nav {
             overflow: hidden;
             box-sizing: border-box;
             padding-left: 20px;
+
+            li {
+                a {
+                    font-size: 1.2rem;
+                }
+
+                &.current-menu-item {
+                    a {
+                        font-family: 'GT Haptik Bold', sans-serif;
+                    }
+                }
+            }
         }
+    }
+}
+
+// Hide Sidebar Note on search-result site
+body.search-result {
+    .content {
+        .sidebar_note {
+            display: none;
+        }
+    }
+}
+
+// Hide Sidebar Notes on mobile
+nav {
+    .sidebar_note {
+        display: none;
     }
 }
 
@@ -165,9 +193,21 @@ nav {
         ul {
             li {
                 a {
-                    font-size: 3rem;
+                    font-size: 2rem;
                 }
             }
+        }
+
+        // Show Sidebar Notes on > 768px
+        .sidebar_note {
+            display: inline-block;
+        }
+    }
+
+    // Hide Sidebar Notes in Content on < 768px
+    .content {
+        .content_note {
+            display: none;
         }
     }
 }
