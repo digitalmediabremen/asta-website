@@ -4,7 +4,8 @@
         register_nav_menu('main',__( 'Main' ));
     }
     add_action( 'init', 'register_menu' );
-
+    
+    /*
     // Add custom admin page
     function admin_news_page() {
 		add_menu_page(
@@ -27,7 +28,7 @@
             <input type="text" name="news0">
         <?php
     }
-    /*
+    
     function admin_news_menu() {
 		add_menu_page(
             'Nachrichten',

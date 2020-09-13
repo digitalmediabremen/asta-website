@@ -5,6 +5,25 @@ $transition-time: .5s;
 $footer-height: 60px;
 $ticker-height: 40px;
 
+// Font
+@font-face {
+    font-family: 'gthaptik';
+    font-style: normal;
+    font-weight: normal;
+    src: url(/hfkasta/wp-content/themes/hfkasta/assets/font/gt-haptik-regular.otf),
+        url(/hfkasta/wp-content/themes/hfkasta/assets/font/gt-haptik-regular.woff),
+        url(/hfkasta/wp-content/themes/hfkasta/assets/font/gt-haptik-regular.woff2);
+}
+
+@font-face {
+    font-family: 'gthaptik';
+    font-style: normal;
+    font-weight: black;
+    src: url(/hfkasta/wp-content/themes/hfkasta/assets/font/gt-haptik-black.otf),
+        url(/hfkasta/wp-content/themes/hfkasta/assets/font/gt-haptik-black.woff),
+        url(/hfkasta/wp-content/themes/hfkasta/assets/font/gt-haptik-black.woff2);
+}
+
 // Imports
 @import "./nav";
 @import "./footer";
@@ -32,7 +51,7 @@ span,
 a,
 li {
     color: $brand-primary-color;
-    font-family: sans-serif;
+    font-family: 'gthaptik', sans-serif;
 }
 
 h1 {

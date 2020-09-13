@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'gthaptik';
+  font-style: normal;
+  font-weight: normal;
+  src: url(/hfkasta/wp-content/themes/hfkasta/assets/font/gt-haptik-regular.otf), url(/hfkasta/wp-content/themes/hfkasta/assets/font/gt-haptik-regular.woff), url(/hfkasta/wp-content/themes/hfkasta/assets/font/gt-haptik-regular.woff2);
+}
+
+@font-face {
+  font-family: 'gthaptik';
+  font-style: normal;
+  font-weight: black;
+  src: url(/hfkasta/wp-content/themes/hfkasta/assets/font/gt-haptik-black.otf), url(/hfkasta/wp-content/themes/hfkasta/assets/font/gt-haptik-black.woff), url(/hfkasta/wp-content/themes/hfkasta/assets/font/gt-haptik-black.woff2);
+}
+
 .hamburger.hamburger--squeeze {
   position: fixed;
   right: 0;
@@ -342,7 +356,7 @@ span,
 a,
 li {
   color: #5a00be;
-  font-family: sans-serif;
+  font-family: 'gthaptik', sans-serif;
 }
 
 h1 {
