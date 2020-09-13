@@ -1,0 +1,173 @@
+$search-bar-height: 40px;
+$menu-item-height: 36px;
+
+.hamburger.hamburger--squeeze {
+    position: fixed;
+    right: 0;
+    top: $ticker-height;
+    z-index: 32;
+}
+
+nav {
+    position: fixed;
+    width: 280px;
+    // min-height: calc(100% - #{$footer-height} - #{$ticker-height});
+    min-height: 100%;
+    right: -280px;
+    top: 0;
+    background: #fff;
+    color: $brand-primary-color;
+    border-left: 4px solid $brand-primary-color;
+    z-index: 30;
+    transition: right $transition-time ease;
+    padding: (60px + $ticker-height) 20px (20px + $footer-height) 20px;
+    // margin: $ticker-height 0 $footer-height 0;
+    box-sizing: border-box;
+
+    &.is-open {
+        right: 0;
+    }
+
+    .search-form {
+        height: $search-bar-height;
+        width: 100%;
+        position: relative;
+
+        .search-field {
+            width: calc(100% - #{$search-bar-height} - 10px);
+            height: 100%;
+            padding: 5px;
+            border: 0;
+            border-radius: 0;
+            background: #fff;
+            color: $brand-primary-color;
+            border: 4px solid $brand-primary-color;
+            font-size: 1.6rem;
+
+            &:focus {
+                outline: none;
+            }
+
+            &::placeholder,
+            &::-webkit-input-placeholder {
+                color: $brand-primary-color;
+                font-size: 1.6rem;
+                line-height: $search-bar-height;
+                vertical-align: middle;
+            }
+
+            /* clears the 'X' from Internet Explorer */
+            &::-ms-clear,
+            &::-ms-reveal {
+                display: none;
+                width: 0;
+                height: 0;
+            }
+
+            /* clears the 'X' from Chrome */
+            &::-webkit-search-decoration,
+            &::-webkit-search-cancel-button,
+            &::-webkit-search-results-button,
+            &::-webkit-search-results-decoration {
+                display: none;
+            }
+        }
+
+        .search-submit {
+            z-index: 32;
+            height: $search-bar-height;
+            width: $search-bar-height;
+        }
+
+        .search-icon {
+            z-index: 31;
+            margin: 4px 0 4px 8px;
+            height: $search-bar-height - 8px;
+            width: $search-bar-height - 8px;
+        }
+
+        .search-submit,
+        .search-icon {
+            background: none;
+            border: 0;
+            position: absolute;
+            right: -5px;
+        }
+    }
+
+    ul {
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            position: relative;
+
+            a {
+                color: $brand-primary-color;
+                font-weight: normal;
+                font-size: 2rem;
+                text-decoration: none;
+                color: $brand-primary-color;
+            }
+
+            &.menu-item-has-children {
+                &::after {
+                    position: absolute;
+                    right: -8px;
+                    top: 7px;
+                    content: '';
+                    /*
+                    position: relative;
+                    display: inline-block;
+                    margin: 0 0 -4px 8px;
+                    */
+                    height: $menu-item-height;
+                    width: $menu-item-height;
+                    background: url('/hfkasta/wp-content/themes/hfkasta/assets/dropdown.svg') no-repeat center center;
+                    transform: rotate(0deg);
+                    transition: transform $transition-time;
+                }
+
+                &.is-open {
+                    &::after {
+                        transform: rotate(-180deg);
+                    }
+
+                    .sub-menu {
+                        max-height: 150px;
+                        transition: max-height $transition-time;
+                    }
+                }
+            }
+        }
+
+        &.sub-menu {
+            max-height: 0px;
+            transition: max-height $transition-time;
+            overflow: hidden;
+            box-sizing: border-box;
+            padding-left: 20px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .hamburger.hamburger--squeeze {
+        display: none;
+    }
+
+    nav {
+        position: relative;
+        padding-top: 20px;
+        margin: 0;
+        right: auto;
+
+        ul {
+            li {
+                a {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,158 @@
+// Variables
+$brand-primary-color: #5a00be;
+$brand-secondary-color: #d50e31;
+$transition-time: .5s;
+$footer-height: 60px;
+$ticker-height: 40px;
+
+// Imports
+@import "./nav";
+@import "./footer";
+@import "./search";
+@import "./boxes";
+@import "./ticker";
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    min-height: 100%;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+li {
+    color: $brand-primary-color;
+    font-family: sans-serif;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    padding-right: 40px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    padding: ($ticker-height + 2px) 0 ($footer-height + 2px) 0;
+    height: auto;
+    min-height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 20;
+
+    main {
+        position: relative;
+
+        .content {
+            max-width: 560px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            padding: 150px 0 0 0;
+        }
+
+        h1 {
+            width: 80%;
+            margin: 0 auto;
+            transform: rotate(-20deg);
+            text-align: center;
+            font-size: 42px;
+        }
+
+        .note-line,
+        .note {
+            display: none;
+        }
+
+        section {
+            width: 100%;
+            margin: 100px auto 0 auto;
+            padding: 0 20px 60px 20px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+// Sticky Footer
+footer {
+    margin-top: -$footer-height;
+}
+
+// Search Result Page
+body.search-results {
+    .wrapper {
+        main {
+            .content {
+                padding: 50px 0 0 0;
+
+                h1 {
+                    font-size: 32px;
+                }
+
+                section {
+                    margin: 60px auto 0 auto;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        width: 100%;
+        display: flex;
+
+        main {
+            flex-basis: 70%;
+
+            h1 {
+                width: 60%;
+                font-size: 72px;
+            }
+
+            .note-line {
+                display: inline-block;
+                width: 160px;
+                height: auto;
+                left: calc(50% - 180px);
+                position: absolute;
+                top: 230px;
+            }
+
+            .note {
+                display: inline-block;
+                width: 120px;
+                height: 100px;
+                left: calc(50% - 250px);
+                top: 180px;
+                text-align: center;
+                vertical-align: bottom;
+                font-size: .7rem;
+                position: absolute;
+                transform: rotate(-14deg);
+
+                p {
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+        }
+
+        nav {
+            flex-basis: 30%;
+        }
+    }
+}

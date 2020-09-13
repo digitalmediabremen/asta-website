@@ -1,0 +1,37 @@
+$duration: 30s;
+
+.ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 4px solid $brand-primary-color;
+    background: #fff;
+    z-index: 30;
+    height: $ticker-height;
+    box-sizing: border-box;
+    margin-bottom: -($ticker-height + 2px);
+    position: relative;
+
+    .ticker {
+        font-size: 1.4rem;
+        white-space: nowrap;
+        box-sizing: content-box;
+        margin-top: -3px;
+        position: absolute;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        -webkit-animation-name: ticker;
+        animation-name: ticker;
+        -webkit-animation-duration: $duration;
+        animation-duration: $duration;
+
+        div {
+            display: inline-block;
+            color: $brand-primary-color;
+            font-weight: bold;
+            line-height: 0;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+.backgroundbox {
+    background: $brand-secondary-color;
+    position: absolute;
+    z-index: -1;
+
+    &_01 {
+        width: 220px;
+        height: 85px;
+        transform: rotate(30deg);
+        top: 60px;
+        right: 15px;
+    }
+
+    &_02 {
+        width: 200px;
+        height: 65px;
+        transform: rotate(15deg);
+        top: 160px;
+        left: 20px;
+    }
+
+    &_03 {
+        width: 130px;
+        height: 25px;
+        transform: rotate(-20deg);
+        top: 270px;
+        left: 10px;
+    }
+
+    &_04 {
+        width: 200px;
+        height: 50px;
+        transform: rotate(0deg);
+        top: 300px;
+        right: 20px;
+    }
+}
+
+@media all and (min-width: 480px) {
+    .backgroundbox {
+        &_02 {
+            top: 130px;
+        }
+
+        &_03 {
+            transform: rotate(-35deg);
+            top: 260px;
+            left: 50px;
+        }
+
+        &_04 {
+            top: 250px;
+        }
+    }
+}
+
+@media all and (min-width: 768px) {
+    .backgroundbox {
+        &_02 {
+            top: 120px;
+            left: 40px;
+        }
+
+        &_03 {
+            top: 240px;
+        }
+
+        &_04 {
+            top: 260px;
+        }
+    }
+}

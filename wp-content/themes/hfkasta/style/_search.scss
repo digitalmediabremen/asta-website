@@ -1,0 +1,21 @@
+.search-results {
+    .wrapper {
+        .search-result-link {
+            padding: 20px 0;
+            display: block;
+
+            h3 {
+                margin: 0;
+            }
+
+            span {
+                font-size: 0.7rem;
+                font-style: italic;
+            }
+
+            &:not(:first-child) {
+                border-top: 2px solid $brand-primary-color;
+            }
+        }
+    }
+}
