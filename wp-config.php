@@ -1,4 +1,8 @@
 <?php
+
+// Configuration common to all environments
+include_once __DIR__ . '/wp-config.common.php';
+
 /**
  * Grundeinstellungen für WordPress
  *
@@ -29,7 +33,7 @@
  * Ersetze datenbankname_hier_einfuegen
  * mit dem Namen der Datenbank, die du verwenden möchtest.
  */
-define( 'DB_NAME', 'hfkasta' );
+define( 'DB_NAME', 'asta-wordpress' );
 
 /**
  * Ersetze benutzername_hier_einfuegen
@@ -40,7 +44,7 @@ define( 'DB_USER', 'root' );
 /**
  * Ersetze passwort_hier_einfuegen mit deinem MySQL-Passwort.
  */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', 'root' );
 
 /**
  * Ersetze localhost mit der MySQL-Serveradresse.
@@ -51,7 +55,7 @@ define( 'DB_HOST', 'localhost' );
  * Der Datenbankzeichensatz, der beim Erstellen der
  * Datenbanktabellen verwendet werden soll
  */
-define( 'DB_CHARSET', 'utf8' );
+define( 'DB_CHARSET', 'utf8mb4' );
 
 /**
  * Der Collate-Type sollte nicht geändert werden.
@@ -70,14 +74,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'Füge hier deine Zeichenkette ein' );
-define( 'SECURE_AUTH_KEY',  'Füge hier deine Zeichenkette ein' );
-define( 'LOGGED_IN_KEY',    'Füge hier deine Zeichenkette ein' );
-define( 'NONCE_KEY',        'Füge hier deine Zeichenkette ein' );
-define( 'AUTH_SALT',        'Füge hier deine Zeichenkette ein' );
-define( 'SECURE_AUTH_SALT', 'Füge hier deine Zeichenkette ein' );
-define( 'LOGGED_IN_SALT',   'Füge hier deine Zeichenkette ein' );
-define( 'NONCE_SALT',       'Füge hier deine Zeichenkette ein' );
+define( 'AUTH_KEY',         '&4u${)Y/@5PGsHD85#]2%hasPa:Qf)UqK.S&jE1c$gHRt[UL}-Zx6+9AfcUvCZ;r' );
+define( 'SECURE_AUTH_KEY',  '(U4r~!2P^@OSiY] #X}xls+Ysr=cDhsp<qEx66K_fN:aL*L;mubOEo]I?gGgk*0@' );
+define( 'LOGGED_IN_KEY',    '_Sz&FbrP,5S$&0m}otI#!AG4zx0)Ap[x[+H<|(b# TEDI/#Pb%{yRbVV.U*/&BS<' );
+define( 'NONCE_KEY',        'Z7Q:7^?HfKu,/DdMgm]DD5-iNV;8#9^;C{[76<CIjx&4XI:jeUS%W-}=e/(@P84D' );
+define( 'AUTH_SALT',        '^VTD$tw,lKP7]!9#Yp8GXMuPcZwJ<BS( .6f-sx+L/!c6:-k@/4e=RG=.hOX6Rd:' );
+define( 'SECURE_AUTH_SALT', '^HheWtY*[ga-oN0/+#_)@`i^%`AW7{o&Hy(|)~}`EPX(YzA)>n;OM:~DA%a;2mCu' );
+define( 'LOGGED_IN_SALT',   'r-j@3W$^Ec/E)?D(4X>a&mpR{JY6jJiQRh?8K|GbKHGPpK6^_]z(UPd)5/OgwF!=' );
+define( 'NONCE_SALT',       'y3Kc8v5ba@*hy(HNUyhk/@a:Do 0^7yHW`4M):7S4J@g^:ksdX0,!b*T=va?5y>y' );
 
 /**#@-*/
 
@@ -104,6 +108,7 @@ $table_prefix = 'wp_';
  */
 define( 'WP_DEBUG', false );
 
+define('VP_ENVIRONMENT', 'dev-jelko');
 /* Das war’s, Schluss mit dem Bearbeiten! Viel Spaß. */
 /* That's all, stop editing! Happy publishing. */
 

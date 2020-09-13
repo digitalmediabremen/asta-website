@@ -5,11 +5,11 @@
 # Alle Änderungen an den Anweisungen zwischen diesen Markierungen werden überschrieben.
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /hfkasta/
+RewriteBase /asta-website/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /hfkasta/index.php [L]
+RewriteRule . /asta-website/index.php [L]
 </IfModule>
 
 # END WordPress
