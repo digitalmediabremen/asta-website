@@ -1,19 +1,14 @@
     <div id="overlay"></div>
 
     <footer>
-
-        <a href="https://www.instagram.com/hfk_asta" target="_blank">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/instagram.svg">
-        </a>
-        <a href="https://t.me/hfkasta" target="_blank">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/telegram.svg">
-        </a>
-        <a href="https://www.facebook.com/asta.hfk.bremen/" target="_blank">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/facebook.svg">
-        </a>
-
-        <a href="get_permalink( get_page_by_path( 'imprint' ) );" class="imprint">Imprint</a>
-
+        <?php
+            wp_nav_menu( 
+                array(
+                    'theme_location' => 'footer',
+                    'menu' => 'Footer'
+                )
+            ); 
+        ?>
     </footer>
     
     <script>
@@ -59,14 +54,12 @@
         };
 
         // Open Sub-Menus
-        var navParents = document.querySelectorAll(".menu-item-has-children");
+        var navParents = document.querySelectorAll(".dropdown");
 
         if (navParents.length > 0) {
             forEach(navParents, function(navParent) {
                 navParent.addEventListener("click", function() {
-                    if (window.innerWidth < 786) {
-                        this.classList.toggle("is-open");
-                    }
+                    this.parentNode.classList.toggle("is-open");
                 }, false);
             });
         }

@@ -25,12 +25,12 @@ node_modules/
 #  Main ignored items
 #------------------------
 
-/wp-config.php
-//wp-config.php
+wp-config.php
 .maintenance
 versionpress.maintenance
 /.htaccess
 /web.config
+
 
 /wp-content/*
 !/wp-content/db.php
@@ -65,3 +65,7 @@ access_log
 ehthumbs.db
 *[Tt]humbs.db
 *.Trashes
+.idea
+.ftppass
+package-lock.json
+

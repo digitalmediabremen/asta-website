@@ -14,7 +14,7 @@
             }
 
             &:not(:first-child) {
-                border-top: 2px solid $brand-primary-color;
+                border-top: $border-weight solid $brand-primary-color;
             }
         }
     }

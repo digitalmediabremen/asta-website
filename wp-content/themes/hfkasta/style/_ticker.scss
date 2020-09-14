@@ -3,7 +3,7 @@ $duration: 30s;
 .ticker-wrap {
     width: 100%;
     overflow: hidden;
-    border-bottom: 4px solid $brand-primary-color;
+    border-bottom: $border-weight solid $brand-primary-color;
     background: #fff;
     z-index: 30;
     height: $ticker-height;
@@ -15,7 +15,7 @@ $duration: 30s;
         font-size: 1.4rem;
         white-space: nowrap;
         box-sizing: content-box;
-        margin-top: -3px;
+        margin-top: 2px;
         position: absolute;
 
         -webkit-animation-iteration-count: infinite;

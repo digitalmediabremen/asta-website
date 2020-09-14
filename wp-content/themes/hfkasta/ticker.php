@@ -2,13 +2,14 @@
     // the query
     $the_query = new WP_Query( array(
         'posts_per_page' => 3,
+        'category_name' => 'ticker'
     )); 
 ?>
 
-<?php if ( $the_query->have_posts() ) : ?>
-    <div class="ticker-wrap">
-        <div class="ticker" id="ticker">
 
+<div class="ticker-wrap">
+    <div class="ticker" id="ticker">
+        <?php if ( $the_query->have_posts() ) : ?>
             <?php for ($i = 0 ; $i < 2; $i++) : ?>
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                     <div class="news">
@@ -28,10 +29,10 @@
                         </a>
                     <?php endif; ?>
                     </div>
-                    <div class="news_seperator">+++++</div>
+                    <div class="news_seperator">+++</div>
                 <?php endwhile; ?>
             <?php endfor; ?>
             <?php wp_reset_postdata(); ?>
-        </div>
+        <?php endif; ?>
     </div>
-<?php endif; ?>
+</div>

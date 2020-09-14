@@ -8,17 +8,30 @@
 
     <?php get_search_form(); ?>
 
-    <?php 
-        $menuLocations = get_nav_menu_locations();
-        $menuID = $menuLocations['main'];
-        wp_nav_menu($menuID);
+    <?php
+        wp_nav_menu( 
+            array(
+                'theme_location' => 'main',
+                'menu' => 'Main'
+            )
+        );
     ?>
 
-    <?php if ( get_field('sidebar_note') ) : ?>
+    <?php if (get_field('sidebar_note')) : ?>
         <div class="sidebar_note">
             <p>
                 <?php the_field('sidebar_note'); ?>
             </p>
         </div>
+    <?php else : 
+        $parentID = $post->post_parent;
+    ?>
+        <?php if (get_field('sidebar_note', $parentID)) : ?>
+            <div class="sidebar_note">
+                <p>
+                    <?php the_field('sidebar_note', $parentID); ?>
+                </p>
+            </div>
+        <?php endif; ?>
     <?php endif; ?>
 </nav>
