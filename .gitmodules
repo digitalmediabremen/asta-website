@@ -1,0 +1,4 @@
+[submodule "wp-content/themes/hfk-asta"]
+	path = wp-content/themes/hfk-asta
+	url = git@github.com:DustinSherman/WORK-HfKAStA.git
+	branch = theme-only
