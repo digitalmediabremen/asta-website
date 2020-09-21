@@ -4,9 +4,7 @@
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins", "plugins", "themes" directory
 wp-content/*
-!wp-content/mu-plugins/
 !wp-content/plugins/
-!wp-content/themes/
 
 # ignore these plugins
 wp-content/plugins/hello.php
@@ -30,19 +28,6 @@ wp-config.php
 versionpress.maintenance
 /.htaccess
 /web.config
-
-
-/wp-content/*
-!/wp-content/db.php
-!/wp-content/index.php
-!/wp-content/plugins/
-/wp-content/plugins/versionpress/
-!/wp-content/mu-plugins/
-!/wp-content/themes/
-!/wp-content/languages/
-!/wp-content/uploads/
-!/wp-content/vpdb/
-
 
 #------------------------
 #  Log files
@@ -72,9 +57,8 @@ package-lock.json
 # Ignore the wp-content directory
 /wp-content
 
-# Don’t ignore plugins dir, but ignore everything inside
-!/wp-content/plugins
-/wp-content/plugins/*
+# Don’t ignore plugins dir
+!/wp-content/plugins/*
 
 # Don’t ignore akismet plugin
 !/wp-content/plugins/akismet
