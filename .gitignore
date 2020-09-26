@@ -1,0 +1,64 @@
+# ignore everything in the root except the "wp-content" directory.
+!wp-content/
+
+# ignore everything in the "wp-content" directory, except:
+# "mu-plugins", "plugins", "themes" directory
+wp-content/*
+!wp-content/plugins/
+!wp-content/themes/hfk-asta
+!wp-content/plugins/*
+
+# Don’t ignore plugins dir
+!/wp-content/plugins/jetpack
+
+# Don’t ignore akismet plugin
+!/wp-content/plugins/akismet
+
+# ignore these plugins
+wp-content/plugins/hello.php
+
+# ignore specific themes
+wp-content/themes/twenty*/
+
+# ignore node dependency directories
+node_modules/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+#------------------------
+#  Main ignored items
+#------------------------
+
+wp-config.php
+.maintenance
+versionpress.maintenance
+/.htaccess
+/web.config
+
+#------------------------
+#  Log files
+#------------------------
+
+*.log
+error_log
+access_log
+
+
+#------------------------
+#  OS Files
+#------------------------
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+*[Tt]humbs.db
+*.Trashes
+.idea
+.ftppass
+package-lock.json
+

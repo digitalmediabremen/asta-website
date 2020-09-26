@@ -1,0 +1,10 @@
+[submodule "wp-content/themes/hfk-asta"]
+	path = wp-content/themes/hfk-asta
+	url = git@github.com:DustinSherman/WORK-HfKAStA.git
+	branch = theme-only
+[submodule "wp-content/plugins/advanced-custom-fields-wpcli"]
+	path = wp-content/plugins/advanced-custom-fields-wpcli
+	url = https://github.com/hoppinger/advanced-custom-fields-wpcli.git
+[submodule "wp-content/plugins/ics-calendar"]
+	path = wp-content/plugins/ics-calendar
+	url = https://github.com/jelko/wp-ics-calendar.git

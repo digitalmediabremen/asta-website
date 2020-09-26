@@ -1,0 +1,1091 @@
+{
+    "key": "group_5e0b65c271d0a",
+    "title": "ICS Calendar Configuration",
+    "fields": [
+        {
+            "key": "field_5e0b8b701203e",
+            "label": "General Settings",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e0b6b022916c",
+            "label": "ICS Calendar Feed(s)",
+            "name": "feeds",
+            "type": "repeater",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">Be sure you are using the <strong>subscribe<\/strong> URL, not a <strong>web view<\/strong> URL.<br \/><br \/>\r\n\r\n<strong>Note:<\/strong> The URL should begin with <code>https:\/\/<\/code>. If your URL begins with <code>http:\/\/<\/code> or <code>webcal:\/\/<\/code>, please change it to <code>https:\/\/<\/code> and test the URL by loading it directly in your browser. If this does not download an <strong>.ics<\/strong> file, your feed may not display properly.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5e0b6b422916d",
+            "min": 1,
+            "max": 10,
+            "layout": "table",
+            "button_label": "Add Another Feed",
+            "sub_fields": [
+                {
+                    "key": "field_5e0b6b422916d",
+                    "label": "<strong>ICS Calendar Feed URL<\/strong>",
+                    "name": "url",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "Enter feed URL..."
+                },
+                {
+                    "key": "field_5e0b7daf4a1e6",
+                    "label": "<strong>Color<\/strong> (optional)",
+                    "name": "color",
+                    "type": "color_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                },
+                {
+                    "key": "field_5e0b9139119b6",
+                    "label": "<strong>Label<\/strong> (optional)",
+                    "name": "feedlabel",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5e0b6d6103f5c",
+            "label": "View",
+            "name": "view",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "66",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "month": "<strong>Month<\/strong> — month table view (default)",
+                "list": "<strong>List<\/strong> — basic day-by-day list",
+                "week": "<strong>Week<\/strong> — single week table view",
+                "grid": "<strong>Grid<\/strong> — day columns with hourly grid",
+                "month-with-sidebar": "<strong>Month with Sidebar<\/strong> — month view with day list in sidebar",
+                "widget": "<strong>Widget<\/strong> — mini month with day list below",
+                "year-with-sidebar": "<strong>Year with Sidebar<\/strong> — year-at-a-glance with day list in sidebar"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "month",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5e0b779e3469c",
+            "label": "Count",
+            "name": "count",
+            "type": "number",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">Number of events to display in list. Leave blank to include all upcoming events.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e0b6d6103f5c",
+                        "operator": "==",
+                        "value": "list"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": "",
+            "step": 1
+        },
+        {
+            "key": "field_5e0b80dc1d22f",
+            "label": "Column Labels",
+            "name": "columnlabels",
+            "type": "radio",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">Format for day name labels in column headers.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e0b6d6103f5c",
+                        "operator": "==",
+                        "value": "month"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5e0b6d6103f5c",
+                        "operator": "==",
+                        "value": "week"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5e0b6d6103f5c",
+                        "operator": "==",
+                        "value": "month-with-sidebar"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "0": "Default for view",
+                "full": "<strong>Full<\/strong> (\"Monday\")",
+                "short": "<strong>Abbreviated<\/strong> (\"Mon\")",
+                "min": "<strong>Initials<\/strong> (\"M\")"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5e0b9c810be33",
+            "label": "Zoom",
+            "name": "zoom",
+            "type": "number",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">Relative size of hour blocks in grid.<br \/>\r\n<code>1.0<\/code> <strong>= approx. 100 pixels<\/strong><\/span><\/small>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e0b6d6103f5c",
+                        "operator": "==",
+                        "value": "grid"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "0.6",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "0.1",
+            "max": 3,
+            "step": "0.1"
+        },
+        {
+            "key": "field_5e0b9d41d6b8a",
+            "label": "Daily Start Time",
+            "name": "hours_start",
+            "type": "time_picker",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">Start time for grid. Default is 7:00 AM (0700).<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e0b6d6103f5c",
+                        "operator": "==",
+                        "value": "grid"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "clear",
+                "id": ""
+            },
+            "display_format": "Hi",
+            "return_format": "Hi"
+        },
+        {
+            "key": "field_5e0b9d97d6b8b",
+            "label": "Daily End Time",
+            "name": "hours_end",
+            "type": "time_picker",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">End time for grid. Default is 7:00 PM (1900).<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e0b6d6103f5c",
+                        "operator": "==",
+                        "value": "grid"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "Hi",
+            "return_format": "Hi"
+        },
+        {
+            "key": "field_5e0b7f8c4466f",
+            "label": "Customize Title and Description",
+            "name": "customize_title_and_description",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Customize title and description displayed above calendar",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e0b6c9b2705a",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">Leave blank to use calendar's default title. Enter <code>none<\/code> to omit title altogether.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e0b7f8c4466f",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e0b6cb52705b",
+            "label": "Description",
+            "name": "description",
+            "type": "wysiwyg",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">Leave blank to use calendar's default description. Enter <code>none<\/code> to omit description altogether.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e0b7f8c4466f",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5e0b84f71d230",
+            "label": "Event Descriptions",
+            "name": "eventdesc",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "clear",
+                "id": ""
+            },
+            "message": "Show event descriptions and links",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e10c8a009b8c",
+            "label": "Description Excerpt",
+            "name": "eventdesc_length",
+            "type": "number",
+            "instructions": "<small class=\"help\"><span class=\"help_content\"><strong>Optional.<\/strong> If your event descriptions are long, enter a number of words to display as an excerpt instead. Full description text will appear if the user clicks the excerpt.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e0b84f71d230",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5e0b6d6103f5c",
+                        "operator": "==",
+                        "value": "list"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5e0b84f71d230",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_5e0b6d6103f5c",
+                        "operator": "==",
+                        "value": "widget"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "words",
+            "min": 0,
+            "max": 1000,
+            "step": 1
+        },
+        {
+            "key": "field_5e594f33bb6ae",
+            "label": "Attachments",
+            "name": "attach",
+            "type": "radio",
+            "instructions": "<small class=\"help\"><span class=\"help_content\"><strong>Optional.<\/strong> If omitted, attachments will display only if <strong>Event Descriptions<\/strong> is checked.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "true": "Show all attachments",
+                "false": "Hide all attachments",
+                "image": "Show images only",
+                "download": "Show downloads only"
+            },
+            "allow_null": 1,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5e0b85f6851ab",
+            "label": "Event Locations",
+            "name": "location",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "clear",
+                "id": ""
+            },
+            "message": "Show event locations",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e0b88955294f",
+            "label": "Event Organizers",
+            "name": "organizer",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "Show event organizers",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e10e387ae534",
+            "label": "Dates & Times",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e0b77ed3469d",
+            "label": "Date Format",
+            "name": "format",
+            "type": "text",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">Format to display date headers in list-type views (including mobile responsive layout for month\/week views). Accepts a <a href=\"https:\/\/secure.php.net\/manual\/en\/function.date.php\" target=\"_blank\">PHP date format string<\/a>. Example: <code>l F j<\/code> will display as \"Thursday March 14\". Default output varies by view.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e27201111fff",
+            "label": "Month\/Year Format",
+            "name": "formatmonthyear",
+            "type": "text",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">Format to display month\/year in headers and dropdown menus. Accepts a <a href=\"https:\/\/secure.php.net\/manual\/en\/function.date.php\" target=\"_blank\">PHP date format string<\/a>. Example: <code>F Y<\/code> (default) will display as \"March 2020\". Only accepts month\/year formatting characters plus space, hyphen, period and slash. Leave blank to use default settings.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "F Y",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e0b855a1d232",
+            "label": "Limit Days",
+            "name": "limitdays",
+            "type": "number",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">Sets the maximum number of days in the future to display. <strong>Note:<\/strong> The exact number of days displayed may be affected by the selected View.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "clear",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": 365,
+            "prepend": "",
+            "append": "days",
+            "min": 1,
+            "max": 3652,
+            "step": 1
+        },
+        {
+            "key": "field_5e10e3f2ae535",
+            "label": "Start On",
+            "name": "start_on",
+            "type": "radio",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">Calendar display will start on the current date in list view, or on the first date of the current week\/month in other views.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "0": "Current date",
+                "startdate": "Fixed start date",
+                "pastdays": "Rolling past date"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5e10e2bdbef58",
+            "label": "Past Days",
+            "name": "pastdays",
+            "type": "number",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">Sets the number of days in the past to display.<br \/> (Affects range of <strong>Limit Days<\/strong>.)<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e10e3f2ae535",
+                        "operator": "==",
+                        "value": "pastdays"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": 0,
+            "prepend": "",
+            "append": "days",
+            "min": 0,
+            "max": 3652,
+            "step": 1
+        },
+        {
+            "key": "field_5e0b8d215ea5e",
+            "label": "Start Date",
+            "name": "startdate",
+            "type": "date_picker",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">First date to display (defaults to current date if left blank).<br \/> Enter in <code>YYYYMMDD<\/code> format or select from date picker.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e10e3f2ae535",
+                        "operator": "==",
+                        "value": "startdate"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "Ymd",
+            "return_format": "Ymd",
+            "first_day": 0
+        },
+        {
+            "key": "field_5e0b85201d231",
+            "label": "Hide Times",
+            "name": "hidetimes",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "clear",
+                "id": ""
+            },
+            "message": "Hide event times (e.g. if times are included in event titles)",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e0b8b1fab6ef",
+            "label": "Show End Times",
+            "name": "showendtimes",
+            "type": "true_false",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">By default, event end times only display on hover.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e0b85201d231",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "Always show event end times",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5f3e8b4b1d0a8",
+            "label": "Modify Output",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e0b8610851ac",
+            "label": "Mask Info",
+            "name": "maskinfo",
+            "type": "text",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">If your calendar is intended to show availability only and you do not wish to display event details, enter a text string here (e.g. \"Booked\") to display on each event. All other event details will be hidden from display.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Enter mask text...",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f3e86f04b23c",
+            "label": "Regular Expressions",
+            "name": "regex",
+            "type": "true_false",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">Executes the PHP <code>preg_replace()<\/code> function on event data, allowing you to build complex text replacement logic if you need to customize how your event information is displayed. Requires an understanding of <a href=\"https:\/\/www.php.net\/manual\/en\/function.preg-replace.php\" target=\"_blank\">PCRE (Perl-Compatible Regular Expressions)<\/a>.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Filter event data using regular expressions",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5f3e888c4b23d",
+            "label": "Pattern",
+            "name": "regex_pattern",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5f3e86f04b23c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f3e88b54b23e",
+            "label": "Replacement",
+            "name": "regex_replacement",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5f3e86f04b23c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f3e88e34b23f",
+            "label": "Scope",
+            "name": "regex_scope",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5f3e86f04b23c",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "event_label_html": "Event titles",
+                "event_description_html": "Event descriptions"
+            },
+            "allow_custom": 0,
+            "default_value": [
+                "event_label_html",
+                "event_sublabel_html",
+                "event_description_html"
+            ],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
+        },
+        {
+            "key": "field_5e0b8b811203f",
+            "label": "Advanced Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e15f5465b6b8",
+            "label": "\"All Day\" Indicator",
+            "name": "hidealldayindicator",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Hide \"ALL DAY\" label above all-day events",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e23682c6983b",
+            "label": "Filter (Event Search)",
+            "name": "showfilter",
+            "type": "true_false",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">Adds a simple form above the calendar to filter the events being displayed. Helps users locate specific items on calendars with a large number of events.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Show event filter form",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5eb1d21d81081",
+            "label": "Legend Inline",
+            "name": "legendinline",
+            "type": "true_false",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">By default, the color key legend displays each color and calendar label as a stacked block element. Set <code>legendinline=\"true\"<\/code> to display them inline to save vertical space on your page.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Display color key legend inline instead of stacked",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e0b86ab851ad",
+            "label": "Links",
+            "name": "nolink",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "Do not show any individual event links",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e0b85d9851aa",
+            "label": "&nbsp;",
+            "name": "linktitles",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e0b86ab851ad",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "Make event titles clickable if event has a URL",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e0b8732c5102",
+            "label": "Mobile",
+            "name": "nomobile",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e0b6d6103f5c",
+                        "operator": "==",
+                        "value": "month"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5e0b6d6103f5c",
+                        "operator": "==",
+                        "value": "week"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Do not collapse layout to a list on mobile views",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e666f7f02d07",
+            "label": "Recurrence",
+            "name": "skiprecurrence",
+            "type": "true_false",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">In general use of this setting is discouraged, as it may omit important events from your calendar. However, this can improve performance with very large calendars, if you do not need to display recurring events.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Skip recurring events",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e67bb80330e0",
+            "label": "Subscribe Link",
+            "name": "subscribelink",
+            "type": "true_false",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">Adds a subscribe link below the calendar. (For multi-feed calendars, the subscribe links will be in the color key next to the calendar names.) <strong>Note:<\/strong> This will make the direct URL of your feed publicly available.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Show ICS feed subscribe link(s)",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e0b903b4b3ee",
+            "label": "Troubleshooting",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e0b904a4b3ef",
+            "label": "Reload",
+            "name": "reload",
+            "type": "true_false",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">Feed data is normally cached on the server for up to 10 minutes to improve performance. Turn this option on to reload the feed from the calendar server on each page load.<\/span><\/small>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "Reload feed(s) on each page load",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5e0b909d4b3f0",
+            "label": "Debug Mode",
+            "name": "debug",
+            "type": "radio",
+            "instructions": "<small class=\"help\"><span class=\"help_content\">Turns on the debugger, which displays raw parser data for diagnostic purposes. <strong style=\"color: red;\">Only logged-in administrators can see the debugger.<\/strong><\/span><\/small>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": [
+                "off",
+                "basic",
+                "extended"
+            ],
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "r34icspro_calendar"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1597936554
+}

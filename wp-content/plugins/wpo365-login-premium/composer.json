@@ -1,0 +1,26 @@
+{
+  "name": "wpo365/wpo365-login-intranet",
+  "type": "plugin",
+  "description": "Enrich a user's WordPress profile with additional fields from Azure AD / Microsoft 365 e.g. first and last name, department, employee ID.",
+  "keywords": ["wordpress", "Office 365", "O365", "Azure AD"],
+  "homepage": "https://www.wpo365.com/",
+  "license": "",
+  "authors": [
+    {
+      "name": "Marco van Wieren",
+      "email": "support@wpo365.com",
+      "homepage": "https://www.wpo365.com/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.29"
+  },
+  "autoload": {
+    "psr-4": {
+      "Wpo\\": "",
+      "Wpo\\Services\\": "Services",
+      "Wpo\\Sync\\": "Sync"
+    }
+  }
+}

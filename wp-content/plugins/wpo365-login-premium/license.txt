@@ -1,0 +1,111 @@
+WPO365 - Wordpress + Office 365 login
+ 
+Copyright 2012 - 2014
+
+End User License Agreement
+
+Commercial use
+
+After you have purchased the premium version of our plugin 
+and have downloaded the plugin as ZIP file, you are licensed 
+to install the plugin only into the number of website(s) 
+corresponding to the license you purchased plus into a 
+corresponding staging environments. 
+
+You may not duplicate the plugin in whole or in part, 
+except that you may make one copy of it for backup or 
+archival purposes. 
+
+You may terminate this license at any time by destroying the 
+original and all copies of the plugin in whatever form. 
+
+You may permanently transfer all of your rights under this 
+EULA provided you transfer all copies of the plugin (including 
+copies of all prior versions if the plugin is an upgrade) and 
+retain none, and the recipient agrees to the terms of this EULA. 
+
+You may not redistribute, modify or resold the plugin in any 
+way without the written permission of WPO365. You may not rent, 
+lease, or lend the plugin. You may not use the plugin in any 
+software or application that compete with products and services 
+of WPO365.
+
+School / Non-profit
+
+If you purchase the School / Non-profit license WPO365 may 
+request you to submit proof of your organization’s status in 
+writing.
+
+Warranty
+
+Plugins sold and distributed by WPO365 are done so in the hope
+that they will be useful, but WITHOUT ANY WARRANTY. Inasmuch as 
+WordPress functions correctly on a clean install of itself, 
+WPO365 plugins are guaranteed to function on a clean install 
+of the minimum, stable and required version of WordPress for 
+the plugins. Because the number and variety of third-party 
+plugins and themes is vast and wide, we do not guarantee that 
+the plugin will function with all third-party plugins, 
+themes or browsers of any kind. 
+
+We do not assume responsibility and will not be held responsible 
+for any conflicts or compatibility issues that may occur due to 
+third-party software. We assume no responsibility for any data 
+loss as a result of installing or using WPO365 plugins. Should c
+onflicts occur with third-party software, we may provide support 
+at our discretion.
+
+Refund Policy
+
+We firmly believe in and stand behind our products 100%, but 
+we understand that they cannot work perfectly for everyone all 
+of the time. If you would like to request a refund, please contact 
+us at info@wpo365.com. 
+
+When requesting a refund, we respectfully ask that you meet the 
+following refund policy conditions:
+
+Eligibility conditions for a refund request:
+
+- You are within the first 30 days of the original purchase of the plugin.
+- We cannot grant refunds after the first 30 days of the original purchase.
+- You have purchased the plugin and after installing and testing the plugin, 
+  have found that it will not work for your business or required setup.
+
+Or
+
+- You have an issue that we are unable to resolve which makes the system unusable. 
+  We may ask you questions regarding the nature of your refund request so we can 
+  improve the plugin in the future.
+- If your issue(s) comes from not being able to install the plugin properly 
+  or get the plugin to perform its basic functions, we will happily consider 
+  your refund request.
+- You have contacted our support team and allowed us to attempt to resolve 
+  your issue(s), or have explained why the plugin will not work for you. 
+  Please note, technical issues caused by 3rd party plugins, themes or other 
+  software will not provide grounds for a refund.
+- You agree to deactivate and uninstall the plugin from your site if a refund 
+  is granted.
+- Refunds will be offered at our sole discretion. By purchasing plugin(s) from 
+  our site, you agree to this refund policy and relinquish any rights to subject 
+  it to any questions, judgment or legal actions. We are not liable to cover any 
+  differences in exchange rates between the time you purchased and the time you are refunded.
+
+Restrictions
+
+Prohibition on Reverse Engineering, Decompilation, and Disassembly. You may not 
+reverse engineer, decompile, or disassemble the plugin in any way without the 
+written permission of WPO365.
+
+Copyright
+
+The plugin is owned by WPO365, and is protected by copyright laws and international 
+copyright treaties, as well as other intellectual property laws and treaties. The 
+plugin is licensed, not sold, to You for use solely subject to the terms and 
+conditions of this Agreement.
+
+Termination
+
+Without prejudice to any other rights, WPO365 may terminate this EULA if you fail 
+to comply with the terms and conditions of this EULA. In such event, you must 
+destroy all copies of the plugin.

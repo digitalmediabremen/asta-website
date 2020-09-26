@@ -1,0 +1,126 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Project-Id-Version: ICS Calendar Pro\n"
+"POT-Creation-Date: 2020-03-14 13:33-0500\n"
+"PO-Revision-Date: 2020-03-14 13:41-0500\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: ics-calendar-pro.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: class-r34icspro.php:528
+#, fuzzy
+msgid "Show events matching:"
+msgstr "显示匹配的事件："
+
+#. Plugin Name of the plugin/theme
+#: customizer.php:12
+#, fuzzy
+msgid "ICS Calendar Pro"
+msgstr "ICS 日历专业版"
+
+#: customizer.php:20
+msgid "Colors"
+msgstr "颜色"
+
+#: customizer.php:25
+msgid "Layout"
+msgstr "布局"
+
+#: customizer.php:30
+msgid "Text"
+msgstr "文本"
+
+#: customizer.php:46
+msgid "Grid Borders"
+msgstr "网格边框"
+
+#: customizer.php:58
+msgid "Header Background"
+msgstr "标题背景"
+
+#: customizer.php:71
+msgid "Header Text"
+msgstr "页眉文本"
+
+#: customizer.php:87
+#, fuzzy
+msgid "Day Background"
+msgstr "日背景"
+
+#: customizer.php:99
+#, fuzzy
+msgid "Event Dividers"
+msgstr "事件分隔符"
+
+#: customizer.php:114
+#, fuzzy
+msgid "Dark Accent Color"
+msgstr "深色重音颜色"
+
+#: customizer.php:126
+#, fuzzy
+msgid "Light Accent Color"
+msgstr "浅色重音颜色"
+
+#: customizer.php:311
+#, fuzzy
+msgid "Hyphenation OFF"
+msgstr "连字符关闭"
+
+#: templates/admin/settings.php:29
+msgid "Are you sure?"
+msgstr "你确定？"
+
+#: templates/calendar-grid.php:84 templates/calendar-month-with-sidebar.php:61
+#: templates/calendar-month-with-sidebar.php:284
+#: templates/calendar-month-with-sidebar.php:286
+#: templates/calendar-widget.php:61 templates/calendar-widget.php:254
+#: templates/calendar-widget.php:256
+#: templates/calendar-year-with-sidebar.php:61
+#: templates/calendar-year-with-sidebar.php:278
+#: templates/calendar-year-with-sidebar.php:280
+msgid "No events found."
+msgstr "没有发现活动事件。"
+
+#: templates/calendar-grid.php:143
+#: templates/calendar-month-with-sidebar.php:191
+#: templates/calendar-widget.php:168
+#: templates/calendar-year-with-sidebar.php:189
+msgid "All Day"
+msgstr "全天"
+
+#: templates/calendar-month-with-sidebar.php:254
+#, fuzzy
+msgid "more events"
+msgstr "更多事件"
+
+#. Description of the plugin/theme
+#, fuzzy
+msgid ""
+"The \"PRO\" add-on to the free ICS Calendar plugin for WordPress adds "
+"advanced layout and customization options."
+msgstr ""
+"WordPress 的免费 ICS 日历插件的\"PRO\"加载项增加了高级布局和自定义选项。"
+
+#. Author of the plugin/theme
+msgid "Room 34 Creative Services, LLC"
+msgstr "Room 34 Creative Services, LLC"
+
+#. Author URI of the plugin/theme
+#, fuzzy
+msgid "https://room34.com"
+msgstr "https://room34.com"

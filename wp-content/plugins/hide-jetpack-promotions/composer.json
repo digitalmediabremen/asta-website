@@ -1,0 +1,22 @@
+{
+  "name": "wearerequired/hide-jetpack-promotions",
+  "description": "WordPress plugin to remove all admin notices for promotions added by Jetpack.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "required",
+      "email": "info@required.com",
+      "homepage": "https://required.com",
+      "role": "Company"
+    },
+    {
+      "name": "Dominik Schilling",
+      "email": "dominik@required.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.2"
+  }
+}

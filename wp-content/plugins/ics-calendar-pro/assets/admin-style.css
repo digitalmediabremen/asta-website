@@ -1,0 +1,80 @@
+.icon.button { margin: 0 4px; padding: 0 4px; }
+
+	.icon.button .dashicons { line-height: 1.333; }
+
+.wrap.r34ics .diagnostics-window {
+	background: #191919;
+	border: 1px solid #ababab;
+	color: #f7f7f7;
+	font-family: monospace;
+	height: 36em;
+	margin: 1em 0;
+	overflow: auto;
+	padding: 0.5em;
+    white-space: pre;
+    width: 95%;
+}
+
+.wrap.r34ics hr {
+	margin: 1em 0;
+}
+
+.wp-core-ui .wrap.r34ics select {
+	vertical-align: baseline;
+}
+
+/* ICS Calendar Configuration field group ID is #acf-group_5e0b65c271d0a */
+
+#acf-group_5e0b65c271d0a .acf-field.clear { clear: both !important; }
+
+#acf-group_5e0b65c271d0a .acf-field .acf-label label,
+#acf-group_5e0b65c271d0a .acf-field .acf-label .description,
+.wrap.r34ics .description
+{
+	display: inline-block;
+	margin: 0;
+	position: relative;
+	vertical-align: top;
+	width: auto;
+}
+
+	#acf-group_5e0b65c271d0a .acf-field .acf-label .description .help, .wrap.r34ics .description .help {
+		cursor: help;
+		display: block;
+		height: 1.5em;
+		position: absolute; top: 0.1em; left: 0.5em;
+		width: 1.5em;
+	}
+	#acf-group_5e0b65c271d0a .acf-field .acf-label .description .help:before, .wrap.r34ics .description .help:before {
+		background: #0985f2;
+		border-radius: 2em;
+		color: #ffffff;
+		content: '?';
+		display: inline-block;
+		font-style: normal;
+		font-weight: bold;
+		height: 1.5em;
+		line-height: 1.5em;
+		position: absolute; top: 0; left: 0;
+		text-align: center;
+		width: 1.5em;
+	}
+	
+		#acf-group_5e0b65c271d0a .acf-field .acf-label .description .help .help_content, .wrap.r34ics .description .help .help_content {
+			background: #ffffff;
+			border: 1px solid #ccd0d4;
+			color: #444444;
+			display: none;
+			font-style: normal;
+			padding: 0.75em;
+			position: absolute; top: 0.75em; left: 0;
+			text-align: left;
+			width: 20em;
+			z-index: 2;
+		}
+		#acf-group_5e0b65c271d0a .acf-field .acf-label .description .help:hover .help_content, .wrap.r34ics .description .help:hover .help_content { display: block; }
+
+			#acf-group_5e0b65c271d0a .acf-field .acf-label .description .help:hover .help_content code, .wrap.r34ics .description .help:hover .help_content code {
+				font-size: 90% !important;
+				padding: 1px 2px !important;
+			}
